@@ -1,2 +1,0 @@
-# nguyenvanhai.info
-HaiNguyen
