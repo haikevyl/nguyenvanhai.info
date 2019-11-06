@@ -222,7 +222,9 @@ header ul li a:last-child {
 }
 
 #stable ul li p {
-	display: none;
+	max-height: 0;
+	opacity: 0;
+	transition: 0.3s;
 	padding-left: 80px;
 	padding-right: 10px;
 	font-size: 14px;
@@ -267,6 +269,7 @@ header ul li a:last-child {
 	padding-bottom: 26px;
 }
 #stable li:hover p {
-	display: block;
+	min-height: 0;
+	opacity: 1;
 }
 
