@@ -37,38 +37,38 @@ a {
 	font-family: "Myriad Pro", sans-serif;
 }
 
-#hero {
+#header {
 	height: 1000px;
 	padding-top: 48px;
 	background-color: #0fd5ef;
-	background-image: url(images/wave.png), url(images/smartphone.png), url(images/bg.png);
+	background-image: url("../images/wave.png"), url("../images/smartphone.png"), url("../images/bg.png");
 	background-repeat: no-repeat, no-repeat, no-repeat;
 	background-size: 100%, auto, cover;
 	background-position: center bottom, center bottom -77px, center bottom;
 }
-header {
+#header .container header {
 	height: 40px;
 	line-height: 40px;
 	display: flex;
 	justify-content: space-between;
 }
-header img {
+#header .container header .logo {
 	display: inline-block;
 }
-header ul li {
+#header .container header #main-menu li {
 	display: inline-block;
 }
-header ul li a {
+#header .container header #main-menu li a {
 	font-size: 16px;
 	color: white;
 	padding: 0px 30px;
 	font-family: "Myriad Pro", sans-serif;
 	font-weight: bold;
 }
-header ul li a:last-child {
+#header .container header #main-menu li a:last-child {
 	padding-right: 0px;
 }
-#hero h1 {
+#header .container #text-title h1 {
 	width: 575px;
 	text-align: center;
 	font-size: 45px;
@@ -78,7 +78,7 @@ header ul li a:last-child {
 	color: white;
     margin: 134px auto 0px auto;
 }
-#hero h2 {
+#header .container #text-title h2 {
 	width: 575px;
 	text-align: center;
 	font-size: 15px;
@@ -89,7 +89,7 @@ header ul li a:last-child {
     margin-top: 15px;
     font-weight: normal;
 }
-#hero #actions a {
+#header .container #text-title #actions a {
 	display: inline-block;
 	height: 40px;
 	line-height: 40px;
@@ -101,14 +101,14 @@ header ul li a:last-child {
 	margin-left: 13px;
 	margin-right: 13px;
 }
-#hero #actions {
+#header .container #text-title #actions {
 	text-align: center;
 	margin-top: 41px;
 }
-#hero #actions a:first-child {
+#header .container #text-title #actions a:first-child {
 	background-color: white;
 }
-#hero #actions a:nth-child(2){
+#header .container #text-title #actions a:nth-child(2){
 	border: 1px solid white;
 	color: white;
 }
@@ -117,22 +117,22 @@ header ul li a:last-child {
 
 #features {
 	background-color: #fafafc;
-	height: 1095px;
+	min-height: 1095px;
 }
 #features .container {
 	display: flex;
 	justify-content: space-between;
 }
 
-#features #phone-image > img {
+#features .container #phone-image > img {
 	margin-top: 290px;
 	margin-left: 110px;
 }
 
-#feature-list {
+#features .container #feature-list {
 	position: relative;
 }
-#feature-list div {
+#features .container #feature-list div {
 	position: absolute;
 	background-color: white;
 	width: 270px;
@@ -142,28 +142,28 @@ header ul li a:last-child {
 	margin-bottom: 20px;
 	padding: 60px 30px 34px 30px;
 }
-#feature-list div:nth-child(1){
+#features .container #feature-list div:nth-child(1){
 	right: 370px;
 	top: 117px;
 }
-#feature-list div:nth-child(2){
+#features .container #feature-list div:nth-child(2){
 	right: 38px;
 	top: 213px;
 }
-#feature-list div:nth-child(3){
+#features .container #feature-list div:nth-child(3){
 	right: 437px;
 	top: 511px;
 }
-#feature-list div:nth-child(4){
+#features .container #feature-list div:nth-child(4){
 	right: 87px;
 	top: 635px;
 }
 
-#feature-list div img {
+#features .container #feature-list div img {
     margin: 0px auto;
     display: block;
 }
-#feature-list div h3 {
+#features .container #feature-list div h3 {
 	text-align: center;
 	font-size: 14px;
 	line-height: 27px;
@@ -171,7 +171,7 @@ header ul li a:last-child {
 	margin-top: 29px;
 	margin-bottom: 16px;
 }
-#feature-list div p {
+#features .container #feature-list div p {
 	text-align: center;
 	font-size: 14px;
 	line-height: 27px;
@@ -179,25 +179,24 @@ header ul li a:last-child {
 }
 
 /** stable **/
-#stable {
-	padding-top: 83px;
-	padding-bottom: 103px;
+#stable .container {
 	display: flex;
 	justify-content: space-between;
 	height: 625px;
+	padding-top: 83px;
+	padding-bottom: 103px;
 }
-
-#stable > div {
+#stable .container > div {
 	width: 470px;
 }
-#stable > ul {
+#stable .container > ul {
 	width: 570px;
 }
-#stable > div > h2 {
+#stable .container > div > h2 {
 	margin-top: 48px;
 	text-align: right;
 }
-#stable > div > p {
+#stable .container > div > p {
 	font-size: 14px;
 	line-height: 27px;
 	color: #6a6d89;
@@ -206,10 +205,10 @@ header ul li a:last-child {
 	margin-bottom: 53px;
 	font-family: "Myriad Pro", sans-serif;
 }
-#stable > div > div {
+#stable .container > div > div {
 	text-align: right;
 }
-#stable > div > div > a {
+#stable .container > div > div > a {
 	display: inline-block;
 	height: 50px;
 	line-height: 50px;
@@ -221,7 +220,7 @@ header ul li a:last-child {
 	font-family: "WorkSans Bold", sans-serif;
 }
 
-#stable ul li p {
+#stable .container ul li p {
 	max-height: 0;
 	opacity: 0;
 	transition: 0.3s;
@@ -233,12 +232,13 @@ header ul li a:last-child {
 	font-family: "WorkSans Bold", sans-serif;
 }
 
-#stable li {
+#stable .container ul li {
 	margin-bottom: 20px;
 	box-shadow: 0px 6px 9px rgba(35, 39, 47, 0.1);
 	border-radius: 4px;
+	transition: 0.3s;
 }
-#stable li a {
+#stable .container ul li a {
 	line-height: 75px;
 	padding-left: 80px;
 	font-size: 15px;
@@ -250,26 +250,97 @@ header ul li a:last-child {
     width: 100%;
     background-position: 26px center;
 }
-#stable li:nth-child(1) a {
+#stable .container ul li:nth-child(1) a {
 	background-image: url(images/heart.png);
 }
 #stable li:nth-child(2) a {
 	background-position: 34px center;
 	background-image: url(images/tag.png);
 }
-#stable li:nth-child(3) a {
+#stable .container ul li:nth-child(3) a {
 	background-image: url(images/brifcase.png);
 }
-#stable li:nth-child(4) a {
+#stable .container ul li:nth-child(4) a {
 	background-image: url(images/pencil.png);
 }
 
-#stable li:hover {
+#stable .container ul li:hover {
 	background-color: #33d2fd;
 	padding-bottom: 26px;
 }
-#stable li:hover p {
-	min-height: 0;
+#stable .container ul li:hover p {
+	max-height: 10em;
 	opacity: 1;
 }
 
+/* everything */
+#everything
+{
+	background: #fafafc;
+}
+#everything .container 
+{
+	min-height: 475px;
+	display: flex;
+	justify-content: space-between;
+}
+#everything .container .left
+{
+	width: 570px;
+	padding-top: 70px;
+	text-align: center;
+}
+#everything .container .right
+{
+	padding-top: 80px;
+	width: 470px;
+}
+#everything .container .right h2
+{
+	margin-left: 25px;
+	margin-bottom: 33px;
+}
+#everything .container .right ul li
+{
+	font-size: 15px;
+	line-height: 21px;
+	margin-bottom: 28px;
+}
+#everything .container .right ul li a
+{
+	display: block;
+	padding-left: 34px;
+	position: relative;
+	font-family: "WorkSans Bold", sans-serif;
+	color: #233148;
+	font-weight: bold;
+}
+#everything .container .right ul li a::after
+{
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0px;
+	background-image: url("../images/check.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 18px;
+	height: 18px;
+}
+#everything .container .right ul li .icon
+{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url("../images/check.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 2px 16px 2px 0;
+}
+#everything .container .right ul li:last-child
+{
+	margin-bottom: 0;
+}
