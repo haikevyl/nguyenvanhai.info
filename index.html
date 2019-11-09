@@ -5,25 +5,27 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/reponsive.css">
+	<!-- <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> -->
+	
 </head>
 <body>
 	<div id="header">
 		<div class="container">
-			<header>
-				<div class="logo">
-					<a href="#"><img src="images/logo-viblo.png" /></a>
-				</div>
-				<ul id="main-menu">
+			<header class="clear-fix">
+				<a href="#" class="logo left"><img src="images/logo-viblo.png" /></a>
+				<button class="menu-toggle" id="main-toggle"></button>
+				<ul id="main-menu" class="main-menu right">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">App</a></li>
 					<li><a href="#">Info</a></li>
 				</ul>
 			</header>
-			<div id="text-title">
+			<div class="text-title">
 				<h1>Choose the better way to reprisent your app</h1>
 				<h2>Vestibulum ac diam sit amet quam vehicula elementum.</h2>
-				<div id="actions">
+				<div class="actions">
 					<a href="#">Download free</a>
 					<a href="#">Contact us</a>
 				</div>
@@ -32,11 +34,11 @@
 	</div>
 
 	<div id="features">
-		<div class="container">
-			<div id="phone-image">
+		<div class="container clear-fix">
+			<div class="phone-image left">
 				<img src="images/smartphone.png" />
 			</div>
-			<div id="feature-list">
+			<div class="feature-list right">
 				<div>
 					<img src="images/cart.png" />
 					<h3>First 7 days free</h3>
@@ -62,49 +64,47 @@
 	</div>
 
 	<div id="stable">
-		<div class="container">
-			<div>
+		<div class="container clear-fix">
+			<div class="left">
 				<h2>Stable and ready</h2>
 				<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam.</p>
 				<div>
 					<a href="#">Download free</a>
 				</div>
 			</div>
-			<ul>
-				<li>
-					<a href="#">Made with love</a>
-					<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
-				</li>
-				<li>
-					<a href="#">Free of use</a>
-					<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
-				</li>
-				<li>
-					<a href="#">Fully support availble</a>
-					<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
-				</li>
-				<li>
-					<a href="#">Flat and modern UI & UX</a>
-					<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
-				</li>
-			</ul>
+			<div class="right">
+				<ul>
+					<li class="item item-active">
+						<a href="javascript:void(0)">Made with love</a>
+						<p class="subText">Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
+					</li>
+					<li class="item">
+						<a href="javascript:void(0)">Free of use</a>
+						<p class="subText">Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
+					</li>
+					<li class="item">
+						<a href="javascript:void(0)">Fully support availble</a>
+						<p class="subText">Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
+					</li>
+					<li class="item">
+						<a href="javascript:void(0)">Flat and modern UI & UX</a>
+						<p class="subText">Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
 	<div id="everything">
-		<div class="container">
+		<div class="container clear-fix">
 			<div class="left">
 				<img src="images/code.png" />
 			</div>
 			<div class="right">
 				<h2>Everything you need</h2>
 				<ul>
-					<li>
-						<a href="#">Android</a>
-					</li>
-					<li>
-						<a href="#">Iphone</a>
-					</li>
+					<li><a href="#">Android</a></li>
+					<li><a href="#">Iphone</a></li>
 				</ul>
 				<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
 			</div>
@@ -112,7 +112,7 @@
 	</div>
 
 	<div id="availble">
-		<div class="container">
+		<div class="container clear-fix">
 			<div class="left">
 				<img src="images/smartphone.png" />
 			</div>
@@ -132,60 +132,67 @@
 					</li>
 				</ul>
 			</div>
+			
 		</div>
-		<a class="link-btn" href="#">Get the app today</a>
+		<a href="#" class="btn-active">Get the app today</a>
 	</div>
 
-	<div id="links" class="container">
-		<div>
-			<h3>Company</h3>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Job</a></li>
-				<li><a href="#">Press</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-		<div>
-			<h3>Development</h3>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Job</a></li>
-				<li><a href="#">Press</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-		<div>
-			<h3>Community</h3>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Job</a></li>
-				<li><a href="#">Press</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-		<div>
-			<h3>Info</h3>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Job</a></li>
-				<li><a href="#">Press</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="get-in-touch" class="container">
-		<h2>Get in touch</h2>
-		<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
-		<form>
-			<input type="text" name="">
-			<button type="submit">Count me in</button>
-		</form>
-	</div>
-	<footer>
+	<div id="links">
 		<div class="container">
-			<p>&copy; 2019 - Appo,All Right Reserved</p>
-			<ul>
+			<div>
+				<h3>Company</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Job</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Development</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Job</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Community</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Job</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Info</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Job</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="get-in-touch">
+		<div class="container">
+			<h2>Get in touch</h2>
+			<p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum</p>
+			<form>
+				<input type="text" name="" placeholder="Email...">
+				<button type="submit">Count me in</button>
+			</form>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container clear-fix">
+			<p class="left">&copy; 2019 - Appo,All Right Reserved</p>
+			<ul class="right">
 				<li><a href="#"><img src="images/facebook.png" /></a></li>
 				<li><a href="#"><img src="images/twitter.png" /></a></li>
 				<li><a href="#"><img src="images/dribble.png" /></a></li>
@@ -194,5 +201,7 @@
 			</ul>
 		</div>
 	</footer>
+
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
