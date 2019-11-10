@@ -4,10 +4,6 @@
 	{
 		padding: 0 15px;
 	}
-	.left, .right
-	{
-		width: 50%;
-	}
 	/* features */
 	#features 
 	{
@@ -41,7 +37,29 @@
 }
 @media screen and ( max-width: 960px)
 {
+	/* Header */
 
+
+	/* features */
+	#features 
+	{
+		padding: 50px 0;
+	}
+	#features .container .phone-image
+	{
+		display: none;
+	}
+	#features .container .feature-list
+	{
+		width: 100%;
+		display: inline-table;
+		text-align: center;
+	}
+	#features .container .feature-list div
+	{
+		float: none;
+		margin-right: 20px;
+	}
 }
 @media screen and ( max-width: 768px)
 {
