@@ -81,10 +81,31 @@ body
 {
 	height: 40px;
 	line-height: 40px;
+	transition: 0.3s;
 }
 #header .container header .main-menu li
 {
 	display: inline-block;
+}
+#header .container header .main-menu #close-mainMenu
+{
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+	transition: 0.3s;
+	display: none;
+}
+#header .container header .main-menu #close-mainMenu:hover
+{
+	background: #2980b9;
 }
 #header .container header .main-menu li a
 {
@@ -100,6 +121,17 @@ body
 }
 #header .container header .menu-toggle
 {
+	display: inline-block;
+	float: right;
+	border: 0;
+	outline: none;
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	font-size: 30px;
+	background: none;
+	cursor: pointer;
 	display: none;
 }
 #header .container .text-title h1
