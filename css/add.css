@@ -1,0 +1,542 @@
+@media screen and (max-width: 1120px){
+	.container {
+		padding: 0px 15px;
+	}
+
+	/* freature */
+	#features {
+		height: auto;
+	}
+	#features .container .phone-image
+	{
+		width: 40%;
+		text-align: center;
+	}
+	#features .container .phone-image > img {
+		display: inline-block;
+		margin: 150px auto 0 auto;
+	}
+	#features .container .feature-list {
+		width: 60%;
+		position: static;
+		margin-top: 85px;
+	}
+	#features .container .feature-list div {
+		position: static;
+		width: 80%;
+		height: auto;
+		padding: 10px 30px;
+		margin: 0 auto 30px auto;
+	}
+	
+	#features .container .feature-list div img {
+		margin: 20px auto;
+	    display: block;
+	    float: left;
+	}
+	#features .container .feature-list div h3 {
+		text-align: left;
+		margin-top: 10px;
+		margin-left: 80px;
+		margin-bottom: 16px;
+	}
+	#features .container .feature-list div p {
+		text-align: left;
+		margin-left: 80px;
+	}
+
+	/* stable */
+	#stable {
+		padding: 83px 0 50px 0;
+		height: auto;
+	}
+	
+	#stable .container .left {
+		width: 45%;
+	}
+	#stable .container .right{
+		width: 45%;
+	}
+
+	/* everything */
+	#everything {
+		padding-top: 0;
+	}
+	#everything .container .left
+	{
+		width: 50%;
+		text-align: center;
+		padding-top: 50px;
+	}
+	#everything .container .left img
+	{
+		width: 90%;
+	}
+	#everything .container .right {
+		width: 50%;
+		padding-top: 65px;
+	}
+	
+	#everything .container .right h2 {
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+	
+	#everything .container .right ul li:first-child {
+		margin-bottom: 15px;
+	}
+	
+	/* availble */
+	#availble .container .left
+	{
+		width: 40%;
+		padding: 0;
+		margin-left: 0;
+		text-align: center;
+	}
+	#availble .container .left img {
+	    display: inline-block;
+	    margin: 112px auto 90px auto;
+	   
+	}
+	#availble .container .right {
+		width: 60%;
+		margin-left: 0;
+	}
+
+	#availble .container h2 {
+    	margin-top: 235px;
+	}
+
+	/* Links */
+	#links {
+    	padding-top: 110px;
+	}
+
+	/* get-in-touch */
+	#get-in-touch .container h2 {
+		margin-top: 30px;
+    	margin-bottom: 0px;
+	}
+
+	#get-in-touch .container p {
+		margin-bottom: 72px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	/* hero */
+	#header .container header .main-menu li a
+	{
+		font-size: 20px;
+		padding: 0px 30px;
+	}
+	#header .container .text-title h1
+	{
+		font-size: 40px;
+		margin-top: 80px;
+	}
+	#header .container .text-title .actions a
+	{
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+	}
+
+	/* feature */
+	#feature .container {
+	    padding-bottom: 100px;
+	}
+	#features .container .phone-image
+	{
+		display: none;
+	}
+	#features .container .feature-list
+	{
+		width: 100%;
+		padding-top: 100px;
+		margin-top: 0;
+	}
+	
+	#features .container #feature-list div h3 {
+	    font-size: 20px;
+	    margin-bottom: 4px;
+	}
+	 #features .container #feature-list div img {
+	    transform: translate(0, 5%);
+	}
+
+	/* stable */
+	#stable .container .left,
+	#stable .container .right
+	{
+		width: 50%;
+	}
+	#stable .container .left
+	{
+		padding-right: 10px;
+	}
+	#stable .container .right
+	{
+		padding-left: 10px;
+	}
+
+	/* everything */
+	#everything .container {
+		padding-top: 30px 0 0 0;
+	}
+	#everything .container .left,
+	#everything .container .right
+	{
+		width: 100%;
+		float: none;
+	}
+	#everything .container .left
+	{
+		padding: 50px 0 0 0;
+		text-align: center;
+	}
+	#everything .container .left img {
+		display: inline-block;
+		width: 90%;
+	}
+	#everything .container .right
+	{
+		padding: 0 30px;
+	}
+	#everything .container .right p {
+		margin-top: 25px;
+	}
+
+	/* available */
+	#availble{
+	   padding-top: 0 !important;;
+	}
+	#availble .container .right ul li:nth-child(1)
+	{
+		margin-left: 15px;
+	}
+	#available .container div ul li:last-child {
+	    padding-left: 0px;
+	}
+	/* link */
+	#link div {
+	    margin: 130px 66px;
+	    margin-bottom: 65px;
+	}
+	#link div:first-child {
+	    margin-left: 40px;
+	}
+	#link div:last-child {
+	    margin-right: 65px;
+	}
+
+	/* get-in-touch */
+	#get-in-touch form {
+	   	margin-top: 50px;
+	}
+	#get-in-touch input {
+	    width: 500px;
+	    height: 60px;
+	}
+	#get-in-touch button {
+		font-size: 16px;
+		height: 60px;
+	}
+
+	/* footer */
+	footer .container p {
+	    font-size: 16px;
+	}
+}
+
+/** 500 -> 768px **/
+/*@media screen and (max-width: 768px) {
+*/	/* hero*/
+	header ul li a {
+	    padding: 0px 15px;
+	}
+	#hero {
+		height: 800px;
+		background-size: 100%, 180px auto, cover;
+	}
+	#hero div h1 {
+		width: auto;
+		font-size: 34px;
+		line-height: 45px;
+	}
+
+	#hero h2 {
+		width: auto;
+	}
+
+	/* feature */
+	#feature-list{
+		width: 100%;
+	}
+	#feature #phone-image {
+		width: 0;
+		overflow: hidden;
+	}
+
+	/* stable */
+	#stable {
+		display: block;
+		padding-top: 65px;
+	}
+	#stable div {
+		width: auto;
+	}
+	#stable > div > * {
+	    margin-right: 15px;
+	}
+	#stable > div > h2 {
+	    text-align: center;
+	}
+	#stable > div > p {
+	    text-align: center;
+	}
+	#stable > div > div {
+		display: block;
+	    text-align: center;
+		padding-right: 0px;
+	}
+	#stable > ul {
+		width: auto;
+		margin-top: 50px; 	
+	}
+	#stable > ul > li {
+	    margin-left: 30px;
+	    margin-right: 30px;
+	}
+
+	/* everything */
+	#everything .container img {
+	    display: none;
+	}
+	#everything .container div h2 {
+	    font-size: 35px;
+	    text-align: center;
+	}
+	#everything .container div ul{
+		display: flex;
+    	justify-content: space-between;
+	}
+	#everything .container div ul li {
+		margin: auto;
+	}
+	#everything .container div ul li a {
+		font-size: 20px;
+	}
+	#everything .container div p {
+		text-align: center;
+		font-size: 16px;
+	}
+
+	/* available */
+	#available .container {
+	    padding: 110px 0px 105px 15px;
+	}
+	#available .container > img {
+	    height: auto;
+	    width: 40%;
+	    padding-right: 5px;
+	}
+	#available .container h2 {
+	    font-size: 32px;
+	    line-height: 45px;
+	}
+	#available .container div {
+		margin-top: 30px;
+		padding-left: 22px;
+    	margin-right: 35px;
+	}
+	#available .container div p {
+		margin-top: 8px;
+		font-size: 15px;
+	}
+	#available .container div ul {
+		display: block;
+	}
+	#available .container div ul li {
+	    margin-top: 10px;
+	}
+	#available .container div ul li:first-child {
+	    padding-right: 0px;
+	}
+	#available .container div ul li:last-child {
+	    padding-left: 0px;
+	}
+	#available .container > a {
+		width: 330px;
+		margin-left: -155px;
+	}
+
+	/* link */
+	#link div {
+	    margin: 130px 25px;
+	}
+	#link div:first-child {
+	    margin-left: 20px;
+	}
+	#link div:last-child {
+	    margin-right: 5px;
+	}
+
+	/* get-in-touch */
+	#get-in-touch h2 {
+	    font-size: 33px;
+	}
+	#get-in-touch p {
+		font-size: 16px;
+	}
+	#get-in-touch input {
+	    width: 90%;
+	    margin-right: 0px;
+	    height: 70px;
+	}
+	#get-in-touch button {
+		margin: 10px auto 0px auto;
+	}
+
+	/* footer */
+	footer .container p {
+	    font-size: 15px;
+	}
+	footer .container ul li {
+	    margin-right: 8px;
+	    margin-left: 8px;
+	}
+	footer .container ul li:first-child {
+		margin-left: 8px;
+    	margin-right: 10px;
+	}
+	footer img {
+	    transform: translate(0, 36%);
+	}
+}
+
+/** < 500px **/
+/*@media screen and (max-width: 500px) {
+*/	/* hero */
+	#hero {
+		padding-top: 20px;
+	}
+	header {
+		display: block;
+	}
+	header ul {
+		display: flex;
+		justify-content: space-between;
+	}
+	#hero img {
+		display: block;
+		margin: 0px auto 20px auto;
+	}
+	#hero div h1 {
+		font-size: 27px;
+		line-height: 38px;
+		margin-top: 100px;
+	}
+	#hero #action a {
+		width: 90%;
+		margin: 10px auto;
+		display: block;
+	}
+
+	/* feature */
+	#feature .container {
+	    padding-bottom: 55px;
+	}
+	#feature-list {
+		padding-top: 55px;
+	}
+
+	/* stable */
+	#stable {
+		padding-top: 30px;
+		padding-bottom: 15px;
+	}x
+
+	/* everthing */
+	#everything .container {
+	    padding-top: 10px;
+	}
+	#everything .container div h2 {
+	    font-size: 30px;
+	}
+	#everything .container div ul li a {
+	    font-size: 18px;
+	}
+
+	/* available */
+	#available .container {
+	    padding: 45px 0px 90px 20px;
+	}
+	#available .container > img {
+		display: none;
+	}
+	#available .container h2 {
+		text-align: center;
+	}
+	#available .container p {
+		text-align: center;
+	}
+	#available .container div ul li {
+	    margin: 20px auto 15px auto;
+	    text-align: center;
+	}
+	#available .container > a {
+		height: 50px;
+	    line-height: 50px;
+	    font-size: 16px;
+	    width: 270px;
+	    margin-left: -135px;
+	}
+
+	/* link */
+	#link div {
+	    margin: 80px 12px 60px 12px;
+	}
+	#link div:first-child {
+	    margin-left: 5px;
+	}
+	#link h3 {
+	    font-size: 14px;
+	    line-height: 25px;
+	    margin-bottom: 16px;
+	}
+	#link a {
+	    font-size: 13px;
+	    line-height: 25px;
+	}
+
+	/* get-in-touch */
+	#get-in-touch {
+	    padding-bottom: 65px;
+	}
+	#get-in-touch input {
+	    height: 55px;
+	}
+	#get-in-touch button {
+	    font-size: 15px;
+	    height: 55px;
+	}
+
+	/* footer */
+	footer .container {
+	    display: block;
+	}
+	footer .container p {
+	    font-size: 14px;
+	    text-align: center;
+	    padding-top: 10px;
+	    line-height: 24px;
+	}
+	footer .container ul li a {
+	    line-height: 66px;
+	}
+	footer .container ul li:last-child {
+	    margin-right: 12px;
+	}	 
+}*/*/
