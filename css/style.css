@@ -67,7 +67,7 @@ body
 	float: right;
 }
 
-/* Header */
+/* ==================================== Header =========================================== */
 #header
 {
 	min-height: 1000px;
@@ -78,23 +78,42 @@ body
 	background-size: 100%, auto, cover;
 	background-position: center bottom, center bottom -77px, center bottom;
 }
-
-#header .container header 
+/* Header Main Menu */
+#header header
 {
 	height: 40px;
 	line-height: 40px;
 	transition: 0.3s;
 }
-#header .container header .content
+#header .header-sticky /* sticky header menu */
 {
-	max-width: 1150px;
-	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 10px;
+	height: 60px !important;
+	background: #2c3e50;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	z-index: 9999;
 }
-#header .container header .main-menu li
+#header header .container .main-menu li
 {
 	display: inline-block;
 }
-#header .container header .main-menu #close-mainMenu
+#header header .container .main-menu li a
+{
+	font-size: 16px;
+	color: white;
+	padding: 0px 30px;
+	font-family: "Myriad Pro", sans-serif;
+	font-weight: bold;
+}
+#header header .container .main-menu li a:last-child 
+{
+	padding-right: 0px;
+}
+#header header .container .main-menu #close-mainMenu
 {
 	display: block;
 	position: absolute;
@@ -110,23 +129,12 @@ body
 	transition: 0.3s;
 	display: none;
 }
-#header .container header .main-menu #close-mainMenu:hover
+#header header .container .main-menu #close-mainMenu:hover
 {
 	background: #2980b9;
 }
-#header .container header .main-menu li a
-{
-	font-size: 16px;
-	color: white;
-	padding: 0px 30px;
-	font-family: "Myriad Pro", sans-serif;
-	font-weight: bold;
-}
-#header .container header .main-menu li a:last-child 
-{
-	padding-right: 0px;
-}
-#header .container header .menu-toggle
+
+#header header .container .menu-toggle
 {
 	display: inline-block;
 	float: right;
@@ -141,19 +149,9 @@ body
 	cursor: pointer;
 	display: none;
 }
-#header .container .header-sticky
-{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 10px 10px;
-	height: 60px !important;
-	background: #2c3e50;
-	box-shadow: 0 0 10px rgba(0,0,0,0.4);
-	z-index: 9999;
-}
+/* End Header Main Menu */
 
+/* Header Action Content */
 #header .container .text-title h1
 {
 	max-width: 575px;
@@ -201,9 +199,11 @@ body
 	border: 1px solid white;
 	color: white;
 }
+/* End Header Action Content */
+/* ========================================== End Header ================================= */
 
-/** features **/
 
+/** ========================================= features =================================== **/
 #features {
 	background-color: #fafafc;
 	height: 1095px;
