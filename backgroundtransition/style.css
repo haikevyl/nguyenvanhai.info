@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container
+{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background:#59a5df96;
+}
+.container-bg{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transition: opacity 0.8s;
+	z-index: -1;
+	opacity: 0;
+}
+.textTitle
+{
+	position: absolute;
+	max-width: 570px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-align: center;
+}
+.textTitle h1
+{
+	font-size: 60px;
+	list-style: 80px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+.textTitle > a
+{
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	color: #333;
+	font-weight: bold;
+	background: #fafafc;
+	border-radius: 24px;
+	padding: 20px 50px;
+	transition: all 0.3s;
+	position: relative;
+}
+.textTitle > a::after
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 24px;
+	background: #fafafc;
+	transition: all 0.3s;
+	z-index: -1;
+	
+}
+.textTitle > a:hover::after
+{
+	opacity: 0;
+	transform: scale(1.5);
+}
