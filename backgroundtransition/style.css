@@ -20,7 +20,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	transition: opacity 0.8s;
+	transition: opacity 2s;
 	z-index: -1;
 	opacity: 0;
 }
