@@ -58,6 +58,7 @@
       height: 50px;
       line-height: 50px;
       text-align: center;
+      cursor: pointer;
       background: rgba(255,255,255,0.4);
       color: #fff;
       border: 0;
@@ -159,7 +160,16 @@
 
     getSizeSlide();
     addDot();
-
+    setInterval(function(){ slideShow("next") }, 3000);
+    slideNext.onclick = function()
+    {
+      slideShow("next");
+    };
+    slidePrev.onclick = function()
+    {
+      slideShow("prev");
+    };
+    dot[indexSlide].classList.add("dot-active");
     window.onresize = function(){
       getSizeSlide();
     };
@@ -194,19 +204,14 @@
       if (evenSlide == "next") {
         indexSlide++;
       }else if (evenSlide == "prev") {
-        indexSlide--
+        indexSlide--;
       };
 
       if (indexSlide >= slideLength) { indexSlide = 0; }
-      else if (indexSlide < 0 ) { indexSlide = slideLength ;};
+      else if (indexSlide < 0 ) { indexSlide = slideLength - 1 ;};
       dot[indexSlide].classList.add("dot-active");
       slideContent[0].style.marginLeft =  slideWidth * indexSlide * -1 + "px";
-  setTimeout(function(){
-    slideShow(evenSlide);
-  }, 5000);
-}
-slideShow('next');
-
-</script>
+    }
+  </script>
 </body>
 </html>
