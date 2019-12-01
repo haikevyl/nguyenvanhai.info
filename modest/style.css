@@ -130,6 +130,7 @@ nav .container #nav-menu .nav-item .nav-link
 	text-transform: uppercase;
 	transition: all 0.3s;
 	border-radius: 4px;
+	border: 2px solid #1d2126;
 }
 nav .container #nav-menu .nav-item-active .nav-link
 {
