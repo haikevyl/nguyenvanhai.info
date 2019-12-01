@@ -72,3 +72,17 @@ ul,li { list-style: none; }
 	.col-mb-11-12 { width : 91.6666667%; }
 	.col-mb-12-12 { width : 100%; }
 }
+@media screen and (max-width: 576px){
+	.col-sm-1-12 { width : 8.3333333%; }
+	.col-sm-2-12 { width : 16.6666667%; }
+	.col-sm-3-12 { width : 25%; }
+	.col-sm-4-12 { width : 33.3333333%; }
+	.col-sm-5-12 { width : 41.6666667%; }
+	.col-sm-6-12 { width : 50%; }
+	.col-sm-7-12 { width : 58.3333333%; }
+	.col-sm-8-12 { width : 66.6666667%; }
+	.col-sm-9-12 { width : 75%; }
+	.col-sm-10-12 { width : 83.3333333%; }
+	.col-sm-11-12 { width : 91.6666667%; }
+	.col-sm-12-12 { width : 100%; }
+}

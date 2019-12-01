@@ -342,10 +342,6 @@ header .slide-control .dot:hover {
 	text-align: center;
 	margin-top: 12px;
 }
-#about .container .right .row .content
-{
-	
-}
 #about .container .right .row .content h3
 {
 	margin-bottom: 5px;
@@ -543,10 +539,10 @@ header .slide-control .dot:hover {
 	padding-top: 60px;
 	padding-bottom: 75px;
 }
-#services .container .row
+#services .container .row .card
 {
-	margin-bottom: 90px;
 	text-align: center;
+	margin-bottom: 60px;
 }
 #services .container .row img
 {
@@ -581,12 +577,13 @@ header .slide-control .dot:hover {
 #features .container .row img
 {
 	width: 100%;
+	height: auto;
 }
 #features .container .text-description
 {
 	color: #dcdfe1;
 }
-
+/* Contact */
 #contact
 {
 	padding-top: 63px;
@@ -672,17 +669,22 @@ header .slide-control .dot:hover {
 footer
 {
 	background-color: #3a454d;
-	height: 95px;
+}
+footer .float-left
+{
+	display: inline-block;
 }
 footer .float-left .text-description
 {
 	color: #FFF;
-	line-height: 95px;
-
+	display: inline-block;
+	line-height: 25px;
+	padding: 30px 0;
 }
 footer .float-right
 {
 	padding: 30px 0;
+	display: inline-block;
 }
 footer .float-right li
 {
@@ -700,4 +702,215 @@ footer .float-right li a img
 	width: 100%;
 	height: 100%;
 	display: block;
+}
+@media screen and (max-width: 1200px)
+{
+	.container
+	{
+		padding: 0 20px;
+	}
+	.container h2.title
+	{
+		margin-bottom: 50px;
+	}
+	/* About */
+	#about 
+	{
+		padding: 50px 0;
+	}
+	#about .container .right .row
+	{
+		margin-bottom: 20px;
+	}
+	#team
+	{
+		padding: 50px 0;
+	}
+	#team .container .row .card .card-title
+	{
+		padding: 10px;
+	}
+	/* work */
+	#work
+	{
+		padding: 50px 0;
+	}
+	#work > a
+	{
+		margin-top: 20px;
+	}
+	/* services */
+	#services 
+	{
+		padding: 50px 0;
+	}
+	#services .container .row .card
+	{
+		margin-bottom: 30px;
+	}
+	#services .container .row .title-mini
+	{
+		margin-bottom: 10px;
+	}
+	/* features */
+	#features
+	{
+		padding: 50px 0;
+	}
+	/* contact */
+	#contact
+	{
+		padding: 50px 0;
+	}
+}
+
+@media screen and (max-width: 960px)
+{
+	/* about */
+	#about .container .left .icon
+	{
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+	#about .container .right .row .number-order
+	{
+		margin: 12px auto 0 auto;
+	}
+	#team .container .row .card
+	{
+		margin: 15px 0;
+	}
+	/* Team */
+	#team .container .row .card .card-title
+	{
+		text-align: center;
+	}
+	/* features */
+	#features .container .row .card
+	{
+		margin: 15px 0;
+	}
+	#features .container .title-mini
+	{
+		margin: 15px 0 10px 0;
+	}
+	footer .float-left .text-description
+	{
+		display: block;
+		text-align: center;
+		padding: 30px 0 0 0;
+	}
+	footer .float-right
+	{
+		text-align: center;
+		padding: 20px 0 30px 0;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	nav .container #nav-menu
+	{
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #1d2126;
+		z-index: 9999;
+		padding-top: 50px;
+		transition: all 0.3s;
+	}
+	nav .container .nav-active
+	{
+		left: 0 !important;
+	}
+	nav .container #nav-menu .nav-item
+	{
+		display: block;
+		margin: 0;
+		height: 50px;
+		width: 100%;
+	}
+	nav .container #nav-menu .nav-item .nav-link
+	{
+		display: block;
+		padding:  0 0 0 20px;
+		font-size: 18px;
+		color: #fff;
+		line-height: 50px;
+		width: 100%;
+		height: 50px;
+	}
+	nav .container #nav-menu .nav-item .nav-link:hover
+	{
+		border: 2px solid #5b6168;
+	}
+	nav .container #nav-menu .nav-item-active .nav-link
+	{
+		background-color: #23b7a4;
+	}
+	nav #main-menu-toggle-btn,
+	nav #close-main-menu-btn
+	{
+		display: block;
+	}
+	#contact .container .row .right
+	{
+		order: 1;
+		-webkit-order: 1;
+	}
+	#contact .container .row .left
+	{
+		order: 2;
+		-webkit-order: 2;
+	}
+	#contact .container .row .right .form-message
+	{
+		position: static;
+		padding: 50px 0 0 0;
+	}
+	#contact .container .form-message p
+	{
+		margin-top: 10px;
+	}
+	
+}
+@media screen and (max-width: 576px)
+{
+	#services .container .row .card::after,
+	#services .container .row .card::before
+	{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	#services .container .row .card 
+	{
+		padding-bottom: 20px;
+	}
+	#services .container .row .card:last-child
+	{
+		margin-bottom: 0;
+	}
+	#services .container .row .card img
+	{
+		display: block;
+		float: left;
+		margin-bottom: 0;
+	}
+	#services .container .row .card .title-mini
+	{
+		width: 80%;
+		float: right;
+		text-align: left;
+		margin-bottom: 0px;
+	}
+	#services .container .row .card .text-description
+	{
+		width: 80%;
+		float: right;
+		text-align: left;
+	}
 }
