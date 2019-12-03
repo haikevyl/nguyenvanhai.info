@@ -682,11 +682,13 @@ footer .float-right
 {
 	padding: 20px 0;
 	display: inline-block;
+	overflow: hidden;
 }
 footer .float-right li
 {
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0 5px;
+	float: right;
 }
 footer .float-right li a
 {
