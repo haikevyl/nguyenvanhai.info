@@ -776,6 +776,10 @@ footer .float-right li a img
 	{
 		margin: 12px auto 0 auto;
 	}
+	#about .container .right .row .col-tb-2-12
+	{
+		padding: 0;
+	}
 	#team .container .row .card
 	{
 		margin: 15px 0;
