@@ -687,7 +687,6 @@ footer .float-right
 footer .float-right li
 {
 	display: inline-block;
-	float: right;
 }
 footer .float-right li a
 {
