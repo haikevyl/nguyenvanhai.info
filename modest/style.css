@@ -680,7 +680,7 @@ footer .float-left .text-description
 }
 footer .float-right
 {
-	padding: 30px 0;
+	padding: 20px 0;
 	display: inline-block;
 }
 footer .float-right li
@@ -690,16 +690,18 @@ footer .float-right li
 }
 footer .float-right li a
 {
-	display: block;
-	width: 25px;
-	height: 25px;
+	width: 40px;
+	height: 40px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
 }
 footer .float-right li a img
 {
-	width: 100%;
-	height: 100%;
 	display: block;
 }
+
+/* reponsive */
 @media screen and (max-width: 1200px)
 {
 	.container
