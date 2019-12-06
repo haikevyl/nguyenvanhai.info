@@ -6,7 +6,6 @@ $(document).ready(function() {
 				top: "-50px"
 			},200);
 		}, function() {
-			$(this).stop();
 			$(this).animate({
 				top: "0"
 			},200);
