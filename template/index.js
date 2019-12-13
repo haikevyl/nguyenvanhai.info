@@ -26,4 +26,8 @@ jQuery(document).ready(function($) {
 			$(this).html('<i class="fas fa-chevron-left"></i>');
 		};
 	});
+	$("#toggle-menu").click(function(event) {
+		console.log("oke");
+		$("#mobile-menu").toggleClass('mobile-menu-active');
+	});
 });
