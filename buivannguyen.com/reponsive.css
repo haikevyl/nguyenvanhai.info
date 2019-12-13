@@ -9,6 +9,11 @@
 	{
 		display: block;
 	}
+	#header .nav-top .container
+	{
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
 	#header .nav-top .main-menu
 	{
 		display: block;
