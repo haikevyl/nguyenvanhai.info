@@ -119,9 +119,10 @@ body {
 }
 #header .nav-active
 {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
+	width: 100%;
 	background: #fff;
 	box-shadow: 0 15px 25px rgba(0,0,0,0.08);
 	z-index: 9998;
@@ -152,7 +153,11 @@ body {
 {
 	background: #2980b9;
 }
-#eader .textTitle h4:first-child
+#header .textTitle
+{
+	margin: 120px auto 0 auto;
+} 
+#header .textTitle h4:first-child
 {
 	font-weight: 200;
 	letter-spacing: 4px;
