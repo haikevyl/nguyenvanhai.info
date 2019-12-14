@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<!-- AOS animate scroll css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+	<!-- LightBox Images -->
+	<link rel="stylesheet" href="lightbox/dist/css/lightbox.min.css">
 	<!-- custom css -->
 	<link rel="stylesheet" href="style.css">
 	<!-- custom Reponsive css -->
@@ -38,7 +40,7 @@
 			<div class="row">
 				<div class="col-md-8 text-center text-white textTitle">
 					<h4>Web developer & Writer</h4>
-					<h1>Nguyễn Văn Hải</h1>
+					<h1>Bùi Văn Nguyện</h1>
 					<p>Xin chào!, tôi làm freelancer thiết kế web và sáng tạo nội dung. Nếu bạn cần tôi, hãy kết nối!</p>
 					<a href="" class="btn hn-btn-white">Liên Hệ Với Tôi!.</a>
 				</div>
@@ -48,20 +50,119 @@
 	<!-- end Header -->
 	
 	<!-- About -->
-	<div id="about">
+	<div id="about" class="container-fluid">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<img src="" alt="" class="w-100">
-				</div>
 				<div class="col-md-8">
-					
+					<h3 class="miniTitle text-center">Nói về tôi</h3>
+					<hr class="hr-center">
+					<div class="row text-justify">
+						<p style="margin-bottom: 20px">Tôi chỉ là một người đam mê máy tính và thế giới web, tôi hâm mộ Google, Facebook cũng như mọi website mang lại lợi ích và kết nối mọi người. Tôi rất muốn và đang hàng ngày từng bước xây dựng những ứng dụng web tiện ích, những giao diện đẹp dù những gì tôi đã làm được rất nhỏ bé.</p>
+						<div class="d-flex flex-row align-items-center">
+							<div class="p-2">
+								<i class="far fa-check"></i>
+							</div>
+							<div class="p-2">
+								<p>Tôi yêu sự sáng tạo trong từng dòng mã, từng mẫu thiết kế, tôi thích cái mới, cái chưa có và luôn cố gắng để thoát khỏi cái "truyền thống" cứng nhắc.</p>
+							</div>
+						</div>
+						<div class="d-flex flex-row align-items-center">
+							<div class="p-2">
+								<i class="far fa-check"></i>
+							</div>
+							<div class="p-2">
+								<p>Tôi thấy mình như một đứa trẻ chơi đùa cùng công nghệ, nơi tôi thỏa sức khám phá những điều mới mẻ. Tôi thích chia sẻ những gì tôi đam mê với tất cả mọi người, tôi thỏa mãn thể hiện sở thích chia sẻ đó trên blog cá nhân và những buổi live stream trên fanpage của mình.</p>
+							</div>
+						</div>
+						<div class="d-flex flex-row align-items-center">
+							<div class="p-2">
+								<i class="far fa-check"></i>
+							</div>
+							<div class="p-2">
+								<p>Tôi coi mỗi con người chúng ta là một phần mềm đang được hoàn thiện. Sẽ có những bug, nhưng sai thì sửa, bug thì fix, quan trọng là phải tìm ra bug trong chính bản thân mà thôi.</p>
+							</div>
+						</div>
+						<div class="d-flex flex-row align-items-center">
+							<div class="p-2">
+								<i class="far fa-check"></i>
+							</div>
+							<div class="p-2">
+								<p>Tôi tôn trọng giá trị và công sức của những bài viết, những dòng code, những ý tưởng của tôi và tất cả các lập trình viên khác. Và tôi đề nghị bạn cũng tôn trọng nó.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex align-items-center justify-content-center" >
+					<div class="content text-center">
+						<img src="https://buivannguyen.com/images/buivannguyen.png" alt="" class="w-75">
+						<h3>Bùi Văn Nguyên</h3>
+						<hr class="hr-center">
+						<div class="icon d-flex flex-row align-items-center justify-content-center">
+							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href=""><i class="fab fa-twitter"></i></a></li>
+							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href=""><i class="fab fa-youtube"></i></a></li>
+							<li><a href=""><i class="far fa-globe-asia"></i></a></li>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end About -->
 
+	<!-- what i do -->
+	<div id="what-i-do" class="container-fluid">
+		<div class="container">
+			<h3 class="miniTitle text-center">Tôi Làm Nhưng gì?</h3>
+			<hr class="hr-center">
+			<div class="row">
+				<div class="col-md-3 whatIdo-card">
+					<img src="https://buivannguyen.com/images/web-design.png" alt="" class="w-100">
+					<h4>Thiết kế web</h4>
+					<hr style="border: 1px solid #686868; opacity: 0.15;">
+					<p>Tôi thiết kế, lập trình website theo yêu cầu của khách hàng. Hoàn toàn hand code nên phù hợp với các website có tính năng chuyên biệt, đặc thù. Xem những gì tôi đã làm trên: <a href="http://dev.buivannguyen.com"> http://dev.buivannguyen.com</a></p>
+				</div>
+				<div class="col-md-3 whatIdo-card">
+					<img src="https://buivannguyen.com/images/content-writing.png" alt="" class="w-100">
+					<h4>Sáng tạo nội dung</h4>
+					<hr style="border: 1px solid #686868; opacity: 0.15;">
+					<p>Tôi làm mọi thứ liên quan đến việc sáng tạo ra nội dung (content writing) trên nhiều chủ đề khác nhau. Viết bài đảm bảo mật độ keyword theo yêu cầu SEO của bạn, tôi có thể viết sê-ri bài dài kỳ.</p>
+				</div>
+				<div class="col-md-3 whatIdo-card">
+					<img src="https://buivannguyen.com/images/writing.png" alt="" class="w-100">
+					<h4>Viết về cuộc sống</h4>
+					<hr style="border: 1px solid #686868; opacity: 0.15;">
+					<p>Tôi viết về những gì tôi đam mê, công nghệ, âm nhạc và những chuyến đi. Tôi viết về cuộc sống, tình bạn, tình yêu, những gì tôi nghe, thấy và cảm nhận.</p>
+				</div>
+				<div class="col-md-3 whatIdo-card">
+					<img src="https://buivannguyen.com/images/passion.png" alt="" class="w-100">
+					<h4>Làm những gì tôi yêu thích</h4>
+					<hr style="border: 1px solid #686868; opacity: 0.15;">
+					<p>Tôi yêu thích lập trình vi điều khiển arduino, chụp ảnh, live stream và nghiên cứu công nghệ. Tôi viết blog lập trình cuộc sống, xem tại <a href="http://laptrinhcuocsong.com">laptrinhcuocsong</a>, tôi live stream trên facebook fan page</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end what i do -->
+
+	<!-- images -->
+	<div id="images" class="container-fluid">
+		<div class="container">
+			<h3 class="miniTitle text-center text-white" style="margin-bottom: 40px;">Hình Ảnh</h3>
+			<ul class="row">
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/1.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/1.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/2.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/2.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/3.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/3.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/4.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/4.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/5.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/5.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/6.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/6.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/7.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/7.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/8.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/8.jpg" alt="Bùi văn nguyện"></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end images -->
 
 
 
@@ -72,6 +173,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<!-- AOS scroll animate js -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+	<!-- lightBox js -->
+	<script type="text/javascript" src="lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
 	<!-- custom js -->
 	<script type="text/javascript" src="main.js"></script>
 </body>
