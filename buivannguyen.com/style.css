@@ -31,6 +31,34 @@ body {
 	font-size: 16px;
 	overflow-x: hidden;
 }
+/* loader */
+#loader
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 10000000;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#loader .content 
+{
+	width: 120px;
+	height: 120px;
+}
+#loader .content  img
+{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+/* end loader */
+
 /* Header */
 #header
 {

@@ -1,4 +1,6 @@
-
+$(window).on('load', function(event) {
+   $('#loader').delay(1000).fadeOut('fast');
+});
 $(document).ready(function() {
 	AOS.init({
 		easing: 'ease-in-out-sine'
