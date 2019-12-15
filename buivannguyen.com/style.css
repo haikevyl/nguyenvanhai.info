@@ -44,6 +44,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 99999999999999999999;
 }
 #loader .content 
 {
