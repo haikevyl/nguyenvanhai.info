@@ -28,7 +28,11 @@ $(document).ready(function() {
 		event.stopPropagation();
 		var idElements = $(this).attr("href");
 		var offsetTop = $(idElements).offset().top;
+		if ($(".main-menu").hasClass('main-menu-active')) {
+			$(".main-menu").removeClass('main-menu-active');
+		};
 		$('html,body').animate({scrollTop: offsetTop},600);
+
 	});
 
 	$('.scrolltop').click(function(event) {
