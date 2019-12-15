@@ -40,4 +40,8 @@
 	{
 		left: 0;
 	}
+	#about .container .col-md-8 p
+	{
+		padding: 0 15px !important;
+	}
 }
