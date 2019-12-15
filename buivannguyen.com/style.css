@@ -29,6 +29,7 @@ body {
 	font-family: "Roboto" !important;
 	color: black !important;
 	font-size: 16px;
+	overflow-x: hidden;
 }
 /* Header */
 #header
