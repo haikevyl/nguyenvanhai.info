@@ -17,6 +17,7 @@ ul,li
 	border: 3px solid #097f8f;
 	margin: 0 auto;
 	margin-bottom: 30px;
+	padding: 0 !important;
 }
 .miniTitle
 {
@@ -27,9 +28,9 @@ ul,li
 body {
 	font-family: "Roboto" !important;
 	color: black !important;
-	min-height: 200vh;
 	font-size: 16px;
 }
+/* Header */
 #header
 {
 	position: relative;
@@ -229,6 +230,9 @@ body {
 	transform: scale(1.5);
 	opacity: 0;
 }
+/* end Header */
+
+/* About */
 #about{
 	padding: 75px 0;
 	border-bottom: 2px solid rgba(0,0,0,0.15);
@@ -248,8 +252,29 @@ body {
 	padding: 0 15px;
 	font-size: 18px;
 	font-weight: 700;
-	color: #686868;
+	color: #fff;
 	transition: all 0.3s;
+	margin: 0 5px;
+}
+#about .container .content .icon li a:hover
+{
+	opacity: 0.8;
+}
+#about .container .content .icon li:nth-child(1) a
+{
+	background: #0084ff;
+}
+#about .container .content .icon li:nth-child(2) a
+{
+	background: #1da1f2;
+}
+#about .container .content .icon li:nth-child(3) a
+{
+	background: #ff0000;
+}
+#about .container .content .icon li:nth-child(4) a
+{
+	background: #181616;
 }
 #about .container  .row .col-md-8 .row .p-2
 {
@@ -268,6 +293,7 @@ body {
 	color: #000;
 	padding: 0 15px;
 }
+/* end About */
 
 #what-i-do
 {
@@ -278,7 +304,6 @@ body {
 {
 	padding: 20px;
 	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s;
 	text-align: center;
 }
 #what-i-do .whatIdo-card:hover
@@ -355,6 +380,7 @@ body {
 	padding: 5px 0px;
 }
 #footer a {
+	display: block;
 	color: white;
 	font-size: 16px;
 }

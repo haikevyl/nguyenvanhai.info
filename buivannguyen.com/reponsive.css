@@ -1,9 +1,5 @@
 @media screen and (max-width: 768px)
 {
-	.container
-	{
-		padding: 0 20px;
-	}
 	#header .nav-top #close-menu,
 	#header .nav-top .toggle-menu
 	{
@@ -43,9 +39,5 @@
 	#header .nav-top .main-menu-active
 	{
 		left: 0;
-	}
-	#footer, #footer h4.row
-	{
-		text-align: center !important;
 	}
 }

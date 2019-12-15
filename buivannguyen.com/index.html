@@ -9,7 +9,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<!-- AOS animate scroll css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- LightBox Images -->
 	<link rel="stylesheet" href="lightbox/dist/css/lightbox.min.css">
 	<!-- custom css -->
@@ -27,22 +27,22 @@
 				<button id="toggle-menu" class="toggle-menu"><i class="far fa-bars"></i></button>
 				<ul class="main-menu">
 					<button id="close-menu"><i class="far fa-times"></i></button>
-					<li><a href="">Trang Chủ</a></li>
-					<li><a href="">Về tôi</a></li>
-					<li><a href="">Tôi Làm gì?</a></li>
-					<li><a href="">Blog</a></li>
-					<li><a href="">Youtube</a></li>
-					<li><a href="">Liên Hệ</a></li>
+					<li><a class="link-scroll" href="#header">Trang Chủ</a></li>
+					<li><a class="link-scroll" href="#about">Về tôi</a></li>
+					<li><a class="link-scroll" href="#what-i-do">Tôi Làm gì?</a></li>
+					<li><a class="link-scroll" href="">Blog</a></li>
+					<li><a class="link-scroll" href="">Youtube</a></li>
+					<li><a class="link-scroll" href="#contact">Liên Hệ</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 text-center text-white textTitle">
-					<h4>Web developer & Writer</h4>
-					<h1>Bùi Văn Nguyện</h1>
-					<p>Xin chào!, tôi làm freelancer thiết kế web và sáng tạo nội dung. Nếu bạn cần tôi, hãy kết nối!</p>
-					<a href="" class="btn hn-btn-white">Liên Hệ Với Tôi!.</a>
+					<h4 data-aos="fade-right" data-aos-duration="1000">Web developer & Writer</h4>
+					<h1 data-aos="fade-left" data-aos-duration="1000">Bùi Văn Nguyện</h1>
+					<p data-aos="fade-right" data-aos-duration="1000">Xin chào!, tôi làm freelancer thiết kế web và sáng tạo nội dung. Nếu bạn cần tôi, hãy kết nối!</p>
+					<a data-aos="fade-up" data-aos-duration="1000" href="#contact" class="btn hn-btn-white link-scroll">Liên Hệ Với Tôi!.</a>
 				</div>
 			</div>
 		</div>
@@ -54,9 +54,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<h3 class="miniTitle text-center">Nói về tôi</h3>
+					<h3 class="miniTitle text-center" data-aos="fade-up" data-aos-duration="1000">Nói về tôi</h3>
 					<hr class="hr-center">
-					<div class="row text-justify">
+					<div class="row text-justify" data-aos="fade-up" data-aos-duration="1000">
 						<p style="margin-bottom: 20px">Tôi chỉ là một người đam mê máy tính và thế giới web, tôi hâm mộ Google, Facebook cũng như mọi website mang lại lợi ích và kết nối mọi người. Tôi rất muốn và đang hàng ngày từng bước xây dựng những ứng dụng web tiện ích, những giao diện đẹp dù những gì tôi đã làm được rất nhỏ bé.</p>
 						<div class="d-flex flex-row align-items-center">
 							<div class="p-2">
@@ -93,14 +93,13 @@
 					</div>
 				</div>
 				<div class="col-md-4 d-flex align-items-center justify-content-center" >
-					<div class="content text-center">
+					<div class="content text-center" data-aos="fade-left" data-aos-duration="2000" style="margin-top: 15px;">
 						<img src="https://buivannguyen.com/images/buivannguyen.png" alt="" class="w-75">
 						<h3>Bùi Văn Nguyên</h3>
 						<hr class="hr-center">
 						<div class="icon d-flex flex-row align-items-center justify-content-center">
 							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href=""><i class="fab fa-twitter"></i></a></li>
-							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
 							<li><a href=""><i class="fab fa-youtube"></i></a></li>
 							<li><a href=""><i class="far fa-globe-asia"></i></a></li>
 						</div>
@@ -117,25 +116,25 @@
 			<h3 class="miniTitle text-center">Tôi Làm Nhưng gì?</h3>
 			<hr class="hr-center">
 			<div class="row">
-				<div class="col-md-3 whatIdo-card">
+				<div class="col-md-3 whatIdo-card aos-init aos-animate" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
 					<img src="https://buivannguyen.com/images/web-design.png" alt="" class="w-100">
 					<h4>Thiết kế web</h4>
 					<hr style="border: 1px solid #686868; opacity: 0.15;">
 					<p>Tôi thiết kế, lập trình website theo yêu cầu của khách hàng. Hoàn toàn hand code nên phù hợp với các website có tính năng chuyên biệt, đặc thù. Xem những gì tôi đã làm trên: <a href="http://dev.buivannguyen.com"> http://dev.buivannguyen.com</a></p>
 				</div>
-				<div class="col-md-3 whatIdo-card">
+				<div class="col-md-3 whatIdo-card aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
 					<img src="https://buivannguyen.com/images/content-writing.png" alt="" class="w-100">
 					<h4>Sáng tạo nội dung</h4>
 					<hr style="border: 1px solid #686868; opacity: 0.15;">
 					<p>Tôi làm mọi thứ liên quan đến việc sáng tạo ra nội dung (content writing) trên nhiều chủ đề khác nhau. Viết bài đảm bảo mật độ keyword theo yêu cầu SEO của bạn, tôi có thể viết sê-ri bài dài kỳ.</p>
 				</div>
-				<div class="col-md-3 whatIdo-card">
+				<div class="col-md-3 whatIdo-card aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
 					<img src="https://buivannguyen.com/images/writing.png" alt="" class="w-100">
 					<h4>Viết về cuộc sống</h4>
 					<hr style="border: 1px solid #686868; opacity: 0.15;">
 					<p>Tôi viết về những gì tôi đam mê, công nghệ, âm nhạc và những chuyến đi. Tôi viết về cuộc sống, tình bạn, tình yêu, những gì tôi nghe, thấy và cảm nhận.</p>
 				</div>
-				<div class="col-md-3 whatIdo-card">
+				<div class="col-md-3 whatIdo-card aos-init aos-animate"data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">
 					<img src="https://buivannguyen.com/images/passion.png" alt="" class="w-100">
 					<h4>Làm những gì tôi yêu thích</h4>
 					<hr style="border: 1px solid #686868; opacity: 0.15;">
@@ -151,14 +150,14 @@
 		<div class="container">
 			<h3 class="miniTitle text-center text-white" style="margin-bottom: 40px;">Hình Ảnh</h3>
 			<ul class="row">
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/1.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/1.jpg" alt="Bùi văn nguyện"></a></li>
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/2.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/2.jpg" alt="Bùi văn nguyện"></a></li>
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/3.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/3.jpg" alt="Bùi văn nguyện"></a></li>
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/4.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/4.jpg" alt="Bùi văn nguyện"></a></li>
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/5.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/5.jpg" alt="Bùi văn nguyện"></a></li>
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/6.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/6.jpg" alt="Bùi văn nguyện"></a></li>
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/7.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/7.jpg" alt="Bùi văn nguyện"></a></li>
-				<li class="col-md-3 col-sm-6"><a href="images/slide/fullsize/8.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/8.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/1.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/1.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/2.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/2.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/3.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/3.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/4.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/4.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/5.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/5.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/6.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/6.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/7.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/7.jpg" alt="Bùi văn nguyện"></a></li>
+				<li class="col-md-3 col-sm-6" data-aos="fade-up"><a href="images/slide/fullsize/8.jpg" data-lightbox="image-lightbox"><img src="images/slide/small/8.jpg" alt="Bùi văn nguyện"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -170,10 +169,10 @@
 			<h3 class="miniTitle">Kết Nối Với Tôi</h3>
 			<hr class="hr-center" style="margin: 15px 0 30px 0;">
 			<div class="row">
-				<div class="col-md-6 d-flex align-items-center">
+				<div class="col-md-6 d-flex align-items-center"  data-aos="fade-right">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d953718.7080629611!2d105.09216848300069!3d20.974041537552857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135008e13800a29%3A0x2987e416210b90d!2zSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1576341710360!5m2!1svi!2s" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6"  data-aos="fade-left">
 					<h3>Gửi Tin Nhắn Cho Tôi</h3>
 					<hr>
 					<form action="">
@@ -209,51 +208,60 @@
 	<div id="footer" class="container-fluid">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-3 col-sm-6">
 					<h4 class="row">Tôi ở mọi nơi</h4>
 					<ul class="row">
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='https://www.facebook.com/hoilaptrinhviennhandan' target='_blank'>Cộng đồng yêu mến tôi</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='https://plus.google.com/104574678671842857033' target='_blank'>Tôi trên google+</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='https://www.youtube.com/laptrinhvientv' target='_blank'>Xem kênh video của tôi</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='https://www.youtube.com/channel/UC5CIt5W4kq4ie0KJEdg2ztg' target='_blank'>Xem video live stream của tôi</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='https://twitter.com/bui_van_nguyen' target='_blank'>Follow tôi trên twitter</a></li>
+						<li class="col-md-12"><a target="_blank" href='https://www.facebook.com/hoilaptrinhviennhandan' target='_blank'>Cộng đồng yêu mến tôi</a></li>
+						<li class="col-md-12"><a target="_blank" href='https://plus.google.com/104574678671842857033' target='_blank'>Tôi trên google+</a></li>
+						<li class="col-md-12"><a target="_blank" href='https://www.youtube.com/laptrinhvientv' target='_blank'>Xem kênh video của tôi</a></li>
+						<li class="col-md-12"><a target="_blank" href='https://www.youtube.com/channel/UC5CIt5W4kq4ie0KJEdg2ztg' target='_blank'>Xem video live stream của tôi</a></li>
+						<li class="col-md-12"><a target="_blank" href='https://twitter.com/bui_van_nguyen' target='_blank'>Follow tôi trên twitter</a></li>
 					</ul>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3 col-sm-6">
 					<h4 class="row">Bạn bè tôi</h4>
 					<ul class="row">
-						<li class="col-md-12 col-sm-6"><a target="_blank"  href='http://uyen.vn' target='_blank'>Thùy uyên</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank"  href='https://niviki.com/' target='_blank'>Niviki.com</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank"  href='http://giaosucan.com/' target='_blank'>Giaosucan's Blog</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank"  href='https://cuongquach.com/' target='_blank'>Cường Quách blog</a></li>
+						<li class="col-md-12"><a target="_blank"  href='http://uyen.vn' target='_blank'>Thùy uyên</a></li>
+						<li class="col-md-12"><a target="_blank"  href='https://niviki.com/' target='_blank'>Niviki.com</a></li>
+						<li class="col-md-12"><a target="_blank"  href='http://giaosucan.com/' target='_blank'>Giaosucan's Blog</a></li>
+						<li class="col-md-12"><a target="_blank"  href='https://cuongquach.com/' target='_blank'>Cường Quách blog</a></li>
 						<li class="col-md-12"><a target="_blank" href="https://yellowcodebooks.com">Yellow code</a></li>
 					</ul>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3 col-sm-6">
 					<h4 class="row">Website tôi thích</h4>
 					<ul class="row">
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='http://ddth.com' target='_blank'>Diễn đàn tin học</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='http://www.nhacraphay.com' target='_blank'>Nhạc rap hay</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='http://thongtincongnghe.com' target='_blank'>Thông tin công nghệ</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='http://www.freelancer.com/' target='_blank'>Cộng đồng freelancer</a></li>
-						<li class="col-md-12 col-sm-6"><a target="_blank" href='http://laptrinhcuocsong.com/' target='_blank'>Lập trình cuộc sống</a></li>
+						<li class="col-md-12"><a target="_blank" href='http://ddth.com' target='_blank'>Diễn đàn tin học</a></li>
+						<li class="col-md-12"><a target="_blank" href='http://www.nhacraphay.com' target='_blank'>Nhạc rap hay</a></li>
+						<li class="col-md-12"><a target="_blank" href='http://thongtincongnghe.com' target='_blank'>Thông tin công nghệ</a></li>
+						<li class="col-md-12"><a target="_blank" href='http://www.freelancer.com/' target='_blank'>Cộng đồng freelancer</a></li>
+						<li class="col-md-12"><a target="_blank" href='http://laptrinhcuocsong.com/' target='_blank'>Lập trình cuộc sống</a></li>
 					</ul>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<h4 class="row text-white">Bùi Văn Nguyện</h4>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<!-- end footer -->
+
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<!-- Bootstrap js -->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<!-- AOS scroll animate js -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+	
 	<!-- lightBox js -->
 	<script type="text/javascript" src="lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
 	<!-- custom js -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script type="text/javascript">
+		AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+	</script>
 	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
