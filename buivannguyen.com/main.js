@@ -31,7 +31,7 @@ $(document).ready(function() {
 		if ($(".main-menu").hasClass('main-menu-active')) {
 			$(".main-menu").removeClass('main-menu-active');
 		};
-		$('html,body').animate({scrollTop: offsetTop},600);
+		$('html,body').animate({scrollTop: offsetTop},1200);
 
 	});
 
