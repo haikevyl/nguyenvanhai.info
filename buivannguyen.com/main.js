@@ -33,8 +33,12 @@ $(document).ready(function() {
 		if ($(".main-menu").hasClass('main-menu-active')) {
 			$(".main-menu").removeClass('main-menu-active');
 		};
-		$('html,body').animate({scrollTop: offsetTop},1200);
-
+		if(offsetTop > 1200)
+		{
+			$('html,body').animate({scrollTop: offsetTop},1600);
+		}else{
+			$('html,body').animate({scrollTop: offsetTop},800);
+		};
 	});
 
 	$('.scrolltop').click(function(event) {
