@@ -30,15 +30,7 @@
    }(document, 'script', 'facebook-jssdk'));
 
   function checkLoginState() {
-    FB.login(
-    function(response) {
-      console.log(response);
-    },
-    {
-      scope: 'public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions',
-      auth_type: 'rerequest'
-    }
-  );
+    
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
@@ -46,7 +38,7 @@
 </script>
 
 <fb:login-button 
-  scope=""
+  scope="public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions"
   onlogin="checkLoginState();">
 </fb:login-button>
 </body>
