@@ -18,11 +18,12 @@
     }
   }
 
-  FB.login(function(response) {
-   console.log(response);
-  }, {scope: 'email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions'});
+ 
 
   function checkLoginState() {               // Called when a person is finished with the Login Button.
+     FB.login(function(response) {
+   console.log(response);
+  }, {scope: 'email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions'});
     FB.getLoginStatus(function(response) {   // See the onlogin handler
       statusChangeCallback(response);
     });
