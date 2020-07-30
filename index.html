@@ -1,76 +1,123 @@
-<!DOCTYPE html>
+
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>Facebook Login JavaScript Example</title>
-<meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <title></title>
 </head>
 <body>
-<script>
+    <script>
 
-  function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-    console.log('statusChangeCallback');
-    console.log(response);                   // The current login status of the person.
-    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-      testAPI();  
-    } else {                                 // Not logged into your webpage or we are unable to tell.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this webpage.';
-    }
-  }
+        // [1] Load lên các thành phần cần thiết
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '574618226506842',
+                cookie: true,
+                xfbml: true,
+                version: 'v7.0'
+            });
+            // Kiểm tra trạng thái hiện tại
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        // [2] Xử lý trạng thái đăng nhập
+        function statusChangeCallback(response) {
+            // Người dùng đã đăng nhập FB và đã đăng nhập vào ứng dụng
+            if (response.status === 'connected') {
+                ShowWelcome();
+            }
+                // Người dùng đã đăng nhập FB nhưng chưa đăng nhập ứng dụng
+            else if (response.status === 'not_authorized') {
+                ShowLoginButton();
+            }
+                // Người dùng chưa đăng nhập FB
+            else {
+                ShowLoginButton();
+            }
+        }
+
+        // [3] Yêu cầu đăng nhập FB
+        function RequestLoginFB() {
+            window.location = 'http://graph.facebook.com/oauth/authorize?client_id=310302665968750&scope=public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions&redirect_uri=http://webcuatoi.com&response_type=token';
+        }
+
+        // [4] Hiển thị nút đăng nhập
+        function ShowLoginButton() {
+            document.getElementById('btb').setAttribute('style', 'display:block');
+            document.getElementById('lbl').setAttribute('style', 'display:none');
+        }
+
+        // [5] Chào mừng người dùng đã đăng nhập
+        function ShowWelcome() {
+            document.getElementById('btb').setAttribute('style', 'display:none');
+            FB.api('/me', function (response) {
+                var name = response.name;
+                var username = response.username;
+                var id = response.id;
+                document.getElementById('lbl').innerHTML = 'Tên=' + name + ' | username=' + username + ' | id=' + id;
+                document.getElementById('lbl').setAttribute('style', 'display:block');
+            });
+        }
+
+    </script>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=310302665968750";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
 
-  function checkLoginState() {               // Called when a person is finished with the Login Button.
-    FB.getLoginStatus(function(response) {   // See the onlogin handler
-      statusChangeCallback(response);
-    });
-  }
+
+    <!-- NÚT ĐĂNG NHẬP -->
+    <input id="btb" type="button" value="ĐĂNG NHẬP" onclick="RequestLoginFB()" style="display:none" />
+    <p id="lbl" style="display:none">BẠN ĐÃ ĐĂNG NHẬP THÀNH CÔNG!</p>
+    <br />
+
+    <!-- HIỂN THỊ NÚT LUIKE -->
+    <div class="fb-like" data-href="http://webcuatoi.com" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+    <br />
+    <!-- HIỂN THỊ PAGE -->
+    <div class="fb-page" data-href="https://www.facebook.com/thuvienlaptrinh" data-tabs="timeline" data-width="300" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thuvienlaptrinh" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thuvienlaptrinh">Thư Viện Lập Trình</a></blockquote></div>
+    <br />
+    <!-- COMMENT -->
+    <div class="fb-comments" data-href="http://webcuatoi.com" data-numposts="10"></div>
 
 
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '574618226506842',
-      cookie     : true,                     // Enable cookies to allow the server to access the session.
-      xfbml      : true,                     // Parse social plugins on this webpage.
-      version    : 'v7.0'           // Use this Graph API version for this call.
-    });
+    <p>POST THỬ</p>
 
+    <form action="https://graph.facebook.com/me/feed" method="post" enctype="multipart/form-data">
+        message<br />
+        <input type="text" name="message" />
+        <br /><br />
+        link<br />
+        <input type="text" name="link" />
+        <br /><br />
+        picture<br />
+        <input type="text" name="picture" />
+        <br /><br />
+        description<br />
+        <input type="text" name="description" />
+        <br /><br />
+        caption<br />
+        <input type="text" name="caption" />
+        <br /><br />
+        name<br />
+        <input type="text" name="name" />
+        <br /><br />
+        access_token<br />
+        <input type="text" name="access_token" />
+        <input type="submit" />
 
-    FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-      statusChangeCallback(response);        // Returns the login status.
-    });
-  };
- 
-  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
+    </form>
 
-  function RequestLoginFB() {
-            window.location = 'http://graph.facebook.com/oauth/authorize?client_id=310302665968750&scope=public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions&redirect_uri=https://nguyenvanhai.info&response_type=token';
-  }
-
-  function dangxuat(){
-    FB.logout(function(response) {
-   // Person is now logged out
-});
-  }
-</script>
-
-
-<!-- The JS SDK Login Button -->
-<input id="btb" type="button" value="ĐĂNG NHẬP" onclick="RequestLoginFB()"/>
-
-<fb:login-button scope="public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions" onlogin="checkLoginState();">
-</fb:login-button>
-<button onclick="dangxuat()">đăng xuất</button>
-<div id="status">
-</div>
-
-<!-- Load the JS SDK asynchronously -->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 </html>
+session-2-example.html
+Đang hiển thị session-2-example.html.
