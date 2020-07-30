@@ -44,6 +44,8 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log(response);
+      console.log(response.email);
+      console.log(response.username);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
