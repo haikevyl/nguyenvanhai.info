@@ -29,10 +29,6 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-});
-
   function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -41,7 +37,7 @@
 </script>
 
 <fb:login-button 
-  scope="public_profile,email"
+  scope="public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions"
   onlogin="checkLoginState();">
 </fb:login-button>
 </body>
