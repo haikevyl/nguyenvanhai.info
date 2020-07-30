@@ -49,6 +49,10 @@
     });
   }
 
+  function RequestLoginFB() {
+            window.location = 'http://graph.facebook.com/oauth/authorize?client_id=310302665968750&scope=public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions&redirect_uri=https://nguyenvanhai.info&response_type=token';
+  }
+
   function dangxuat(){
     FB.logout(function(response) {
    // Person is now logged out
@@ -58,6 +62,7 @@
 
 
 <!-- The JS SDK Login Button -->
+<input id="btb" type="button" value="ĐĂNG NHẬP" onclick="RequestLoginFB()"/>
 
 <fb:login-button scope="public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_photos,user_location,publish_actions" onlogin="checkLoginState();">
 </fb:login-button>
