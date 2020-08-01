@@ -1,26 +1,228 @@
+
+Đăng nhập Facebook
+Tổng quan
+iOS
+Android
+Web
+Nút Đăng nhập
+Mã truy cập
+Quyền
+Bật HTTPS
+Đối với thiết bị
+Cách làm tốt nhất
+Thiết kế trải nghiệm người dùng
+Bảo mật đăng nhập
+Các quyền
+Mã truy cập
+Authentication Versus Data Access
+Thử nghiệm
+Xét duyệt ứng dụng
+Nâng cao
+Nhật ký thay đổi
+Business Login for Direct Businesses
+Trên Trang này
+Đăng nhập bằng Facebook dành cho Web bằng JavaScript SDK
+Tài liệu này hướng dẫn bạn các bước triển khai Đăng nhập bằng Facebook với Facebook SDK for JavaScript trên trang web.
+
+Nếu bạn là người dùng Facebook và đang gặp sự cố khi đăng nhập tài khoản của mình, hãy truy cập Trung tâm trợ giúp của chúng tôi.
+
+Trước khi bạn bắt đầu
+Bạn sẽ cần có:
+
+Một tài khoản nhà phát triển trên Facebook
+Một Ứng dụng Facebook đã đăng ký và được định cấu hình Cài đặt cơ bản
+Facebook JavaScript SDK
+Nếu vì lý do nào đó mà bạn không thể sử dụng JavaScript SDK của chúng tôi, thì bạn cũng có thể tạo một quy trình đăng nhập theo cách thủ công để triển khai Đăng nhập bằng Facebook.
+
+1. Nhập URL chuyển hướng của bạn trong Bảng điều khiển ứng dụng
+Trong Bảng điều khiển ứng dụng, hãy chọn ứng dụng của bạn và cuộn tới Thêm sản phẩm Nhấp vào Thiết lập trong thẻ Đăng nhập bằng Facebook. Chọn Cài đặt trong bảng điều hướng bên trái và trong Cài đặt OAuth ứng dụng, nhập URL chuyển hướng vào trường URI chuyển hướng OAuth hợp lệ để ủy quyền thành công.
+
+2. Kiểm tra trạng thái đăng nhập của một người
+Bước đầu tiên khi trang web tải là xác định xem người dùng đã đăng nhập vào trang web của bạn thông qua phương thức Đăng nhập bằng Facebook hay chưa. Một lệnh gọi đến FB.getLoginStatus sẽ kích hoạt lệnh gọi đến Facebook để lấy trạng thái đăng nhập. Sau đó, Faceook gọi hàm gọi lại của bạn bằng các kết quả đó.
+
+Ví dụ về lệnh gọi
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+Ví dụ về phản hồi ở định dạng JSON
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '{access-token}',
+        expiresIn:'{unix-timestamp}',
+        reauthorize_required_in:'{seconds-until-token-expires}',
+        signedRequest:'{signed-parameter}',
+        userID:'{user-id}'
+    }
+}
+status chỉ định trạng thái đăng nhập của người dùng trang web. status có thể là một trong những trường hợp sau:
+
+Loại Status	Mô tả
+connected
+
+Người dùng đăng nhập Facebook và đã đăng nhập trang web của bạn.
+
+not_authorized
+
+Người dùng đăng nhập Facebook nhưng chưa đăng nhập trang web của bạn.
+
+unknown
+
+Người dùng chưa đăng nhập Facebook nên bạn không biết họ đã đăng nhập trang web của bạn hay chưa. Hoặc FB.logout() đã được gọi trước, do đó, không thể kết nối với Facebook.
+
+Nếu trạng thái là connected, thì phản hồi sẽ trả về các thông số authResponse sau đây:
+
+Thông số authResponse	Giá trị
+accessToken
+
+Mã truy cập của người dùng trang web.
+
+expiresIn
+
+Dấu thời gian UNIX khi mã truy cập hết hạn. Sau khi mã truy cập hết hạn, thì người dùng cần đăng nhập lại.
+
+reauthorize_required_in
+
+Khoảng thời gian trước khi phiên đăng nhập hết hạn (tính bằng giây) và người dùng cần đăng nhập lại.
+
+signedRequest
+
+Một thông số đã ký chứa thông tin về người dùng trang web.
+
+userID
+
+ID của người dùng trang web.
+
+JavaScript SDK tự động phát hiện trạng thái đăng nhập nên bạn không cần thực hiện bất kỳ điều gì để kích hoạt hành vi này.
+
+3. Đăng nhập người dùng
+Nếu người dùng mở trang web nhưng chưa đăng nhập hoặc chưa đăng nhập vào Facebook, thì bạn có thể sử dụng hộp thoại Đăng nhập để nhắc họ thực hiện cả hai việc đó. Nếu họ chưa đăng nhập Facebook thì trước tiên, họ sẽ được nhắc đăng nhập ứng dụng này, sau đó sẽ được nhắc đăng nhập trang web của bạn.
+
+Có 2 cách để đăng nhập người dùng:
+
+Nút Đăng nhập bằng Facebook
+Hộp thoại Đăng nhập từ JavaScript SDK
+A. Đăng nhập bằng nút Đăng nhập
+Để sử dụng Nút Đăng nhập bằng Facebook, hãy sử dụng Bộ cấu hình plugin để tùy chỉnh Nút đăng nhập và nhận mã.
+
+Bộ cấu hình plugin
+Kích thước nút
+large
+Văn bản nút
+continue_with
+Hình dạng bố cục của nút
+default
+ Bật nút Đăng xuất Bao gồm tên và ảnh đại diện khi người dùng đăng nhập Facebook. [?]
+Width
+
+Lấy mã
+B. Đăng nhập bằng hộp thoại Đăng nhập từ JavaScript SDK
+Để sử dụng nút đăng nhập của chính bạn, hãy kích hoạt hộp thoại Đăng nhập bằng lệnh gọi tới FB.login().
+
+FB.login(function(response){
+  // handle the response 
+});
+Yêu cầu cấp thêm quyền
+Khi một người nhấp vào nút HTML của bạn, một cửa sổ bật lên hiển thị hộp thoại Đăng nhập. Với hộp thoại này, bạn có thể yêu cầu quyền truy cập vào dữ liệu của người dùng. Thông số scope có thể được chuyển cùng với lệnh gọi hàm FB.login(). Thông số tùy chọn này là một danh sách các quyền (được phân cách bằng dấu phẩy) mà người dùng phải xác nhận để cấp cho trang web của bạn quyền truy cập vào dữ liệu của họ.
+
+Ví dụ về lệnh gọi
+Trong ví dụ sau, người dùng được yêu cầu đăng nhập nếu trang web của bạn có quyền truy cập vào trang cá nhân công khai và email của họ.
+
+FB.login(function(response) {
+  // handle the response
+}, {scope: 'public_profile,email'});
+Xử lý phản hồi của hộp thoại Đăng nhập
+Phản hồi, để kết nối hoặc hủy, sẽ trả về đối tượng authResponse cho lệnh gọi lại đã chỉ định khi bạn thực hiện lệnh gọi FB.login(). Phản hồi này có thể được phát hiện và xử lý trong FB.login().
+
+Ví dụ về lệnh gọi
+FB.login(function(response) {
+  if (response.status === 'connected') {
+    // Logged into your webpage and Facebook.
+  } else {
+    // The person is not logged into your webpage or we are unable to tell. 
+  }
+});
+4. Đăng xuất người dùng
+Đăng xuất người dùng khỏi trang web bằng cách đính kèm hàm JavaScript SDK FB.logout() vào một nút hoặc liên kết.
+
+Ví dụ về lệnh gọi
+FB.logout(function(response) {
+   // Person is now logged out
+});
+Lưu ý: Lệnh gọi hàm này cũng có thể đăng xuất người dùng khỏi Facebook.
+
+Các trường hợp cần xem xét
+Người dùng đăng nhập Facebook, rồi đăng nhập trang web của bạn. Khi đăng xuất khỏi ứng dụng của bạn, người đó vẫn đang đăng nhập Facebook.
+Người dùng đăng nhập trang web của bạn và đăng nhập Facebook như một phần trong quy trình đăng nhập của ứng dụng. Khi đăng xuất khỏi ứng dụng của bạn, người đó cũng đăng xuất Facebook.
+Người dùng đăng nhập trang web khác và đăng nhập Facebook như một phần trong quy trình đăng nhập của trang web khác rồi đăng nhập trang web của bạn. Khi đăng xuất khỏi một trong hai trang web, người đó cũng đăng xuất Facebook.
+Ngoài ra, việc đăng xuất trang web của bạn sẽ không thu hồi quyền mà người dùng đã cấp cho trang web của bạn trong khi đăng nhập. Bạn phải thu hồi quyền trong một bước riêng biệt. Xây dựng trang web của bạn theo cách sao cho người dùng đã đăng xuất sẽ không nhìn thấy hộp thoại Đăng nhập khi đăng nhập trở lại.
+
+Ví dụ về mã đầy đủ
+Mã này tải và khởi chạy JavaScript SDK trong trang HTML của bạn. Thay thế {app-id} bằng ID ứng dụng của bạn và {api-version} bằng phiên bản API Đồ thị để sử dụng. Nếu bạn không có lý do cụ thể cho việc sử dụng phiên bản cũ hơn, hãy chỉ định phiên bản mới nhất: v7.0.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+</head>
+<body>
 <script>
 
-window.fbAsyncInit = function() {
-	FB.init({
-		appId : '628977207745112',
-		cookie : true,
-		xfbml : true,
-		version : 'v7.0'
-	});
-};
+  function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+    console.log('statusChangeCallback');
+    console.log(response);                   // The current login status of the person.
+    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+      testAPI();  
+    } else {                                 // Not logged into your webpage or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this webpage.';
+    }
+  }
 
-function dangnhapFB() {
-	alert("5");
-	FB.logout(function(response) {
-		alert(response);
-	};
-};
+
+  function checkLoginState() {               // Called when a person is finished with the Login Button.
+    FB.getLoginStatus(function(response) {   // See the onlogin handler
+      statusChangeCallback(response);
+    });
+  }
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '628977207745112',
+      cookie     : true,                     // Enable cookies to allow the server to access the session.
+      xfbml      : true,                     // Parse social plugins on this webpage.
+      version    : 'v7.0'           // Use this Graph API version for this call.
+    });
+
+
+    FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+      statusChangeCallback(response);        // Returns the login status.
+    });
+  };
+ 
+  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+
 </script>
 
 
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> 
+<!-- The JS SDK Login Button -->
 
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
 
 <div id="status">
-<input type="button" value="đăng nhập" onclick="dangnhapFB()" />
 </div>
+
+<!-- Load the JS SDK asynchronously -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>
